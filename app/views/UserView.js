@@ -5,6 +5,9 @@ class UserView {
         if(payload === null){
             return { error: "El payload no existe" }
         }
+        if(payload.username != 'string' && payload.name != 'string' && payload.id != 'int'){
+            return { error: "Los valores de las propiedades necesitan tener un valor valido"}
+        }
     }
 }
 
